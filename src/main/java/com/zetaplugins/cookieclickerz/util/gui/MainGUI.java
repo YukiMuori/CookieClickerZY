@@ -34,7 +34,7 @@ public class MainGUI {
         Inventory inventory = Bukkit.createInventory(null, 5 * 9, MessageUtils.getAndFormatMsg(false, "inventories.main.title", "&8CookieClickerZ"));
         GuiAssets.addBorder(inventory);
 
-        inventory.setItem(11, new CustomItem(Material.GOLD_INGOT)
+        inventory.setItem(13, new CustomItem(Material.GOLD_INGOT)
                 .setName(MessageUtils.getAndFormatMsg(false, "inventories.main.shopTitle", "&e&lShop"))
                 .setLore(MessageUtils.getAndFormatMsgList("inventories.main.shopDescription"))
                 .getItemStack());
@@ -42,7 +42,7 @@ public class MainGUI {
                 .setName(MessageUtils.getAndFormatMsg(false, "inventories.main.achievementsTitle", "<#9932cc>&lBoosters"))
                 .setLore(MessageUtils.getAndFormatMsgList("inventories.main.achievementsDescription"))
                 .getItemStack());
-        inventory.setItem(22, new CustomItem(mainItem)
+        inventory.setItem(4, new CustomItem(mainItem)
                 .setName(MessageUtils.getAndFormatMsg(false, "inventories.main.clickerTitle", "%ac%&lYour Cookies"))
                 .setLore(MessageUtils.getAndFormatMsgList(
                         "inventories.main.clickerDescription",
@@ -53,11 +53,11 @@ public class MainGUI {
                         new MessageUtils.Replaceable<>("%score%", playerData.getFormattedScore())
                 ))
                 .getItemStack());
-        inventory.setItem(29, new CustomItem(Material.FEATHER)
+        inventory.setItem(11, new CustomItem(Material.FEATHER)
                 .setName(MessageUtils.getAndFormatMsg(false, "inventories.main.prestigeTitle", "&6&lPrestige"))
                 .setLore(MessageUtils.getAndFormatMsgList("inventories.main.prestigeDescription"))
                 .getItemStack());
-        inventory.setItem(33, new CustomItem(CustomItem.getHead(player))
+        inventory.setItem(22, new CustomItem(CustomItem.getHead(player))
                 .setName(MessageUtils.getAndFormatMsg(false, "inventories.main.topTitle", "<#FF5733>&lTop Players"))
                 .setLore(MessageUtils.getAndFormatMsgList("inventories.main.topDescription"))
                 .getItemStack());
